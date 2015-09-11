@@ -5,9 +5,8 @@
 public class ExemploA {
     //Primeiro exemplo de acesso ao git
  
-   public double calcularFolha(){
-       //TODO: Implementar
-       return 0;
+   public double calcularFolha(Funcionario funcionario){
+       return funcionario.getSalario() * 2;
    }
     
 }
