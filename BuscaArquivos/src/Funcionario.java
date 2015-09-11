@@ -1,3 +1,6 @@
+
+// define um funcionario 
+
 public class Funcionario {
     
     private String nome;
