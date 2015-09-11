@@ -1,7 +1,7 @@
 
-
 /*
 Uma observação xxxxxx
+ define um funcionario 
 */
 public class Funcionario {
     
