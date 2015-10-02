@@ -4,15 +4,15 @@ import javax.swing.JOptionPane;
 
 public class Login extends javax.swing.JFrame {
 
-     private LoginListener classlogin = new LoginListener(this);
-    
+    private LoginListener classlogin = new LoginListener(this);
+
     public Login() {
         initComponents();
         this.setLocationRelativeTo(null);
     }
 
-       @SuppressWarnings("unchecked")
-       
+    @SuppressWarnings("unchecked")
+
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -42,8 +42,18 @@ public class Login extends javax.swing.JFrame {
         jLabel2.setText("Senha");
 
         jButton1.setText("Acessar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Sair");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -85,6 +95,19 @@ public class Login extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        if ((jTextField1.getText().equals("Admin") && (jPasswordField1.getText().equals("Admin")))) {
+            TelaPrincipal tela = new TelaPrincipal();
+            tela.setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(null, "Usuário inválido!");
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     public static void main(String args[]) {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -94,11 +117,10 @@ public class Login extends javax.swing.JFrame {
             }
         });
     }
-    
-    
-    public Usuario getUsuario(){
+
+    public Usuario getUsuario() {
        // Integer.parseInt(null)
-        
+
         return new Usuario(jTextField1.getText(), jPasswordField1.getText());
     }
 

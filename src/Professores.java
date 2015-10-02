@@ -1,4 +1,7 @@
 
+import javax.swing.JOptionPane;
+
+
 public class Professores extends javax.swing.JInternalFrame {
 
     public Professores() {
@@ -36,6 +39,11 @@ public class Professores extends javax.swing.JInternalFrame {
         });
 
         jButton2.setText("Cancelar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -102,8 +110,16 @@ public class Professores extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
+        if ((jTextField1.getText().equals("") && (jTextField2.getText().equals("") && (jTextField3.getText().equals("") && (jTextField4.getText().equals("")))))) {
+             JOptionPane.showMessageDialog(null, "Projeto ainda em andamento");
+         } else {
+            JOptionPane.showMessageDialog(null, "Algum campo não está preenchido");
+        }
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

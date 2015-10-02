@@ -1,4 +1,7 @@
 
+import javax.swing.JOptionPane;
+
+
 public class Alunos extends javax.swing.JInternalFrame {
 
     private Aluno alun = new Aluno(this);
@@ -41,6 +44,11 @@ public class Alunos extends javax.swing.JInternalFrame {
         jButton1.setText("Salvar");
 
         jButton2.setText("Cancelar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -97,8 +105,16 @@ public class Alunos extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-
+         if ((jTextField1.getText().equals("") && (jTextField2.getText().equals("") && (jTextField3.getText().equals("") && (jTextField4.getText().equals("")))))) {
+             JOptionPane.showMessageDialog(null, "Projeto ainda em andamento");
+         } else {
+            JOptionPane.showMessageDialog(null, "Algum campo não está preenchido");
+        }
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
