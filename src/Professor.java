@@ -15,7 +15,7 @@ public class Professor implements ActionListener{
         if ("sair".equals(e.getActionCommand())){
             professor.dispose();
         }else if ("salvar".equals(e.getActionCommand())){
-            JOptionPane.showMessageDialog(professor, "Programa em manutenção.");
+            JOptionPane.showMessageDialog(professor, "Em ajustes");
         }
     }
     

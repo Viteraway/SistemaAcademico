@@ -14,7 +14,7 @@ public class Aluno implements ActionListener{
         if ("sair".equals(e.getActionCommand())){
             aluno.dispose();
         }else if ("salvar".equals(e.getActionCommand())){
-            JOptionPane.showMessageDialog(aluno, "Programa em manutenção.");
+            JOptionPane.showMessageDialog(aluno, "Em ajustes.");
         }
     }
     
