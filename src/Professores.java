@@ -106,19 +106,15 @@ public class Professores extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+         JOptionPane.showMessageDialog(null, "Em ajustes.");  
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        if ((jTextField1.getText().equals("") && (jTextField2.getText().equals("") && (jTextField3.getText().equals("") && (jTextField4.getText().equals("")))))) {
-             JOptionPane.showMessageDialog(null, "Projeto ainda em andamento");
-         } else {
-            JOptionPane.showMessageDialog(null, "Algum campo não está preenchido");
-        }
+     
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        System.exit(0);
+         Professores.this.dispose(); 
     }//GEN-LAST:event_jButton2ActionPerformed
 
 

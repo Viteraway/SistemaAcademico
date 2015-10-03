@@ -12,7 +12,7 @@ public class Professor implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if ("sair".equals(e.getActionCommand())){
+        if ("cancelar".equals(e.getActionCommand())){
             professor.dispose();
         }else if ("salvar".equals(e.getActionCommand())){
             JOptionPane.showMessageDialog(professor, "Em ajustes");

@@ -9,9 +9,10 @@ public class Aluno implements ActionListener{
         this.aluno = alunos;
     }
 
+
     @Override
     public void actionPerformed(ActionEvent e) {
-        if ("sair".equals(e.getActionCommand())){
+        if ("cancelar".equals(e.getActionCommand())){
             aluno.dispose();
         }else if ("salvar".equals(e.getActionCommand())){
             JOptionPane.showMessageDialog(aluno, "Em ajustes.");
