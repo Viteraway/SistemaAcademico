@@ -1,12 +1,14 @@
+package br.academico.visao;
 
-import java.awt.event.ActionEvent;
+import br.academico.controler.LoginListener;
+import br.academico.modelo.Usuario;
 import javax.swing.JOptionPane;
 
-public class Login extends javax.swing.JFrame {
+public class LoginPanel extends javax.swing.JFrame {
 
     private LoginListener classlogin = new LoginListener(this);
 
-    public Login() {
+    public LoginPanel() {
         initComponents();
         this.setLocationRelativeTo(null);
     }
@@ -113,14 +115,12 @@ public class Login extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
 
             public void run() {
-                new Login().setVisible(true);
+                new LoginPanel().setVisible(true);
             }
         });
     }
 
     public Usuario getUsuario() {
-       // Integer.parseInt(null)
-
         return new Usuario(jTextField1.getText(), jPasswordField1.getText());
     }
 
