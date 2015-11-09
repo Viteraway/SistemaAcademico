@@ -20,6 +20,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuCadastro = new javax.swing.JMenu();
         jMenuItemAlunos = new javax.swing.JMenuItem();
         jMenuItemCursos = new javax.swing.JMenuItem();
+        jMenuItemMaterias = new javax.swing.JMenuItem();
         jMenuItemProfessores = new javax.swing.JMenuItem();
         jMenuItemUsuarios = new javax.swing.JMenuItem();
         jMenuItemSair = new javax.swing.JMenuItem();
@@ -58,6 +59,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
         jMenuCadastro.add(jMenuItemCursos);
+
+        jMenuItemMaterias.setText("Matérias");
+        jMenuItemMaterias.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemMateriasActionPerformed(evt);
+            }
+        });
+        jMenuCadastro.add(jMenuItemMaterias);
 
         jMenuItemProfessores.setText("Professores");
         jMenuItemProfessores.addActionListener(new java.awt.event.ActionListener() {
@@ -126,7 +135,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemProfessoresActionPerformed
 
     private void jMenuItemSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSairActionPerformed
-        System.exit(0);
+        this.dispose();
+        new LoginPanel().setVisible(true);
     }//GEN-LAST:event_jMenuItemSairActionPerformed
 
     private void jMenuItemSobreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSobreActionPerformed
@@ -144,6 +154,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
         usuariosPanel.setVisible(true);
         jDesktopPanel.add(usuariosPanel);
     }//GEN-LAST:event_jMenuItemUsuariosActionPerformed
+
+    private void jMenuItemMateriasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemMateriasActionPerformed
+        MateriasPanel panel = new MateriasPanel();
+        panel.setVisible(true);
+        jDesktopPanel.add(panel);
+    }//GEN-LAST:event_jMenuItemMateriasActionPerformed
 
     public JDesktopPane getDDesktopPane() {
         return jDesktopPanel;
@@ -192,6 +208,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenuCadastro;
     private javax.swing.JMenuItem jMenuItemAlunos;
     private javax.swing.JMenuItem jMenuItemCursos;
+    private javax.swing.JMenuItem jMenuItemMaterias;
     private javax.swing.JMenuItem jMenuItemProfessores;
     private javax.swing.JMenuItem jMenuItemSair;
     private javax.swing.JMenuItem jMenuItemSobre;

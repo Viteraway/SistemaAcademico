@@ -1,9 +1,9 @@
 package br.academico.controler;
 
+import br.academico.modelo.base.ProfessorBD;
 import br.academico.visao.ProfessoresPanel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JOptionPane;
 
 public class ProfessorListener implements ActionListener {
 
@@ -15,10 +15,11 @@ public class ProfessorListener implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if ("cancelar".equals(e.getActionCommand())) {
+        if ("Cancelar".equals(e.getActionCommand())) {
             panel.dispose();
-        } else if ("salvar".equals(e.getActionCommand())) {
-            JOptionPane.showMessageDialog(panel, "Em ajustes");
+        } else if ("Salvar".equals(e.getActionCommand())) {
+            ProfessorBD.add(panel.getProfessor());
+            panel.dispose();
         }
     }
 

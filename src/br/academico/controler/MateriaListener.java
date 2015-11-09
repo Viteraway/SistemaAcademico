@@ -1,15 +1,15 @@
 package br.academico.controler;
 
-import br.academico.modelo.base.AlunosBD;
-import br.academico.visao.AlunosPanel;
+import br.academico.modelo.base.MateriaBD;
+import br.academico.visao.MateriasPanel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class AlunoListener implements ActionListener {
+public class MateriaListener implements ActionListener {
 
-    private AlunosPanel panel;
+    private MateriasPanel panel;
 
-    public AlunoListener(AlunosPanel panel) {
+    public MateriaListener(MateriasPanel panel) {
         this.panel = panel;
     }
 
@@ -18,7 +18,7 @@ public class AlunoListener implements ActionListener {
         if ("Cancelar".equals(e.getActionCommand())) {
             panel.dispose();
         } else if ("Salvar".equals(e.getActionCommand())) {
-            AlunosBD.add(panel.getAluno());
+            MateriaBD.add(panel.getMateria());
             panel.dispose();
         }
     }
