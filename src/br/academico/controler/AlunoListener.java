@@ -1,9 +1,9 @@
 package br.academico.controler;
 
-import br.academico.modelo.base.AlunosBD;
 import br.academico.visao.AlunosPanel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 
 public class AlunoListener implements ActionListener {
 
@@ -15,11 +15,10 @@ public class AlunoListener implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if ("Cancelar".equals(e.getActionCommand())) {
+        if ("cancelar".equals(e.getActionCommand())) {
             panel.dispose();
-        } else if ("Salvar".equals(e.getActionCommand())) {
-            AlunosBD.add(panel.getAluno());
-            panel.dispose();
+        } else if ("salvar".equals(e.getActionCommand())) {
+            JOptionPane.showMessageDialog(panel, "Em ajustes.");
         }
     }
 
