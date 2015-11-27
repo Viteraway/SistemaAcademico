@@ -13,4 +13,9 @@ Observações
 * Na maioria dos casos não iniciaram os objetos com get's e sets nos listeners
 
 * Está sendo permitido abrir a mesma janela mais de uma vez
+* 
+
+27/11/2015
+#Não encontrei nenhuma mplementação da segunda parte do trabalho (stream)
+Onde está?
 
