@@ -16,6 +16,6 @@ Observações
 * 
 
 27/11/2015
-#Não encontrei nenhuma mplementação da segunda parte do trabalho (stream)
+#Não encontrei nenhuma implementação da segunda parte do trabalho (stream)
 Onde está?
 
